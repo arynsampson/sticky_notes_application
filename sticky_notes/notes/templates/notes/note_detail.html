@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="note note-detail" style="background-color:
+		{% if note.topic.name == "Work" %}lightblue{% endif %}
+		{% if note.topic.name == "School" %}lightgreen{% endif %}
+		{% if note.topic.name == "Admin" %}#ffadad{% endif %}
+		{% if note.topic.name == "Other" %}#fff275{% endif %}
+	;">
+	<p>{{ note.title }}</p>
+	<hr />
+	<p>{{ note.content }}</p>
+	<hr />
+	<div class="note-footer" style="font-size: 11px">
+		<p>Owner - {{ note.owner }}</p>
+		<p>Topic: <span class="topic-pill" style="background-color:
+		{% if note.topic.name == "Work" %}darkblue{% endif %}
+		{% if note.topic.name == "School" %}darkgreen{% endif %}
+		{% if note.topic.name == "Admin" %}red{% endif %}
+		{% if note.topic.name == "Other" %}#e65a2b{% endif %}
+	;">{{ note.topic }}</span></p>
+		<p>Created at: {{ note.created_at }}</p>
+	</div>
+</div>
+<a href="{% url 'note_update' pk=note.pk %}" class="btn">Update Sticky Note</a>
+<a href="{% url 'note_delete' pk=note.pk %}" class="btn">Delete Sticky Note</a>
+{% endblock %}

@@ -1,0 +1,99 @@
+* {
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	width: 950px;
+	margin: auto;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 20px;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+.btn {
+	text-decoration: none;
+	background-color: cadetblue;
+	padding: 8px;
+	border-radius: 4px;
+	color: white;
+	border: none;
+	display: inline-block;
+}
+
+.btn:hover {
+	background-color: #e65a2b;
+	border: none;
+}
+
+.notes-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.note {
+	list-style-type: none;
+	padding: 10px;
+}
+
+.note a {
+	color: #e65a2b;
+	text-decoration: underline;
+}
+
+.note a:hover {
+	color: black;
+}
+
+.note hr {
+	border: black solid 0.5px;
+}
+
+.note p {
+	color: black;
+	overflow-wrap: anywhere;
+}
+
+.note-detail {
+	padding: 15px;
+	margin: 0 auto 20px auto;
+}
+
+.note-detail p {
+	margin: 0;
+}
+
+form {
+	margin-bottom: 30px;
+}
+
+input,
+textarea {
+	display: block;
+	margin: 5px 0;
+	padding: 5px;
+}
+
+.topic-pill {
+	display: inline-block;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: darkgoldenrod;
+	color: white;
+}
+
+.note-footer p {
+	margin: 10px 0;
+}
