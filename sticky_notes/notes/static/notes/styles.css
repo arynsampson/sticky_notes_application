@@ -47,6 +47,12 @@ h1 {
 	padding: 10px;
 }
 
+.note-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 .note a {
 	color: #e65a2b;
 	text-decoration: underline;

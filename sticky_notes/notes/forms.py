@@ -10,6 +10,7 @@ class NoteForm(forms.ModelForm):
     - title: CharField for the sticky note title.
     - content: TextField for the sticky note content.
     - owner_name: CharField to input the name of the sticky note owner.
+    - topic: CharField to select a topic from pre-populated options.
 
     Meta class:
     - Defines the model to use (Note) and the fields to include in the

@@ -7,7 +7,10 @@
 		{% if note.topic.name == "Admin" %}#ffadad{% endif %}
 		{% if note.topic.name == "Other" %}#fff275{% endif %}
 	;">
-		<a href="{% url 'note_detail' pk=note.pk %}">{{ note.title}}</a>
+		<div class="note-header">
+			<span>{{ note.title}}</span>
+			<a href="{% url 'note_detail' pk=note.pk %}">Edit</a>
+		</div>
 		<hr />
 		<p>{{ note.content }}</p>
 		<hr />
